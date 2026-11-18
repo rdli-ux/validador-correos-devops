@@ -17,4 +17,4 @@ def test_usuario_vacio():
   assert es_correo_valido("@escuela.org") == False
 
 def test_multiples_arrobas():
- assert es_correo_valido("@escuela.org") == False
+  assert es_correo_valido("alumno@@escuela.org") == False
