@@ -1,7 +1,8 @@
 def es_correo_valido(correo):
+  """Devuelve True si el correo tiene un solo @ y un punto después del @."""
   if correo.count("@") != 1:
     return False
-  usuario, dominio = correo.split("@")
-  if not usuario or "." not in dominio:
+  usuario, dominio = correo.split("@", 1)
+  if usuario == "" or "." not in dominio:
     return False
   return True
